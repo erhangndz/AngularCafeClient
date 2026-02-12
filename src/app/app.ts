@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { CategoryModel } from './models/categoryModel';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,15 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('AngularCafeClient');
+
+title:string= "Kategoriler"
+
+category: CategoryModel
+categories: CategoryModel[] = [
+  {id:1,name:'Kahveler'},
+  {id:2,name:'Tatlılar'},
+  {id:3,name:'İçecekler'}
+ ]
+
+
 }
