@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CategoryModel } from '../../models/categoryModel';
+import { CategoryService } from '../../services/category-service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-category',
@@ -9,19 +11,19 @@ import { CategoryModel } from '../../models/categoryModel';
 })
 export class Category {
 
-  categories: CategoryModel[] = [
-    {id:1,name:'Kahveler'},
-    {id:2,name:'Tatlılar'},
-    {id:3,name:'İçecekler'}
-   ]
+  private categoryService= inject(CategoryService);
 
 
-getCategories(){
+  categories = toSignal(this.categoryService.getAll(), {initialValue: []} )
 
-return this.categories;
 
-}
-
+  delete(id:number){
+    if(confirm('Silmek istediğinize emin misiniz?')){
+      this.categoryService.delete(id).subscribe({
+        next: () => window.location.reload()
+      })
+    }
+  }
 
 
 }

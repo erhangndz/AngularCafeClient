@@ -10,6 +10,9 @@ import { AdminLayout } from './layouts/admin-layout/admin-layout';
 import { Category } from './admin-components/category/category';
 import { Menu } from './admin-components/menu/menu';
 import { About } from './admin-components/about/about';
+import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CreateCategory } from './admin-components/category/create-category/create-category';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,17 @@ import { About } from './admin-components/about/about';
     AdminLayout,
     Category,
     Menu,
-    About
+    About,
+    CreateCategory
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
