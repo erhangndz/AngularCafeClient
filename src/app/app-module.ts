@@ -13,6 +13,7 @@ import { About } from './admin-components/about/about';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CreateCategory } from './admin-components/category/create-category/create-category';
+import { UpdateCategory } from './admin-components/category/update-category/update-category';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreateCategory } from './admin-components/category/create-category/crea
     Category,
     Menu,
     About,
-    CreateCategory
+    CreateCategory,
+    UpdateCategory
   ],
   imports: [
     BrowserModule,
