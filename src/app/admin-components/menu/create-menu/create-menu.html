@@ -1,0 +1,30 @@
+<div class="container">
+
+<h2>Yeni Ürün Oluştur</h2>
+
+
+<form #form="ngForm" (ngSubmit)="create()" >
+
+  <label>Ürün Adı</label>
+  <input type="text" name="name" [(ngModel)]="menu.name" class="form-control" required >
+  <br>
+  <label>Fiyatı</label>
+  <input type="text" name="price" [(ngModel)]="menu.price" class="form-control" required >
+  <br>
+  <label>Görsel Url</label>
+  <input type="text" name="imageUrl" [(ngModel)]="menu.imageUrl" class="form-control" required >
+  <br>
+  <label>Kategori</label>
+  <select name="categoryId" [(ngModel)]="menu.categoryId" class="form-control" required>
+    @for (item of categories(); track $index) {
+
+        <option value="{{item.id}}">{{item.name}}</option>
+
+    }
+  </select>
+  <br>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid" >Kaydet</button>
+
+</form>
+
+</div>

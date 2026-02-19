@@ -9,6 +9,8 @@ import { About } from './admin-components/about/about';
 import { Menu } from './admin-components/menu/menu';
 import { CreateCategory } from './admin-components/category/create-category/create-category';
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
+import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
+import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
 
 const routes: Routes = [
 
@@ -29,7 +31,9 @@ const routes: Routes = [
   {path:'category/create',component:CreateCategory},
   {path:'category/update/:id',component:UpdateCategory},
   {path:'about',component:About},
-  {path:'menu',component:Menu}
+  {path:'menu',component:Menu},
+  {path:'menu/create',component:CreateMenu},
+  {path:'menu/update/:id',component:UpdateMenu}
 ]}
 
 
