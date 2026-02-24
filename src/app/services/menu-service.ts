@@ -15,6 +15,11 @@ export class MenuService {
     return this.http.get<MenuModel[]>(this.apiUrl);
   }
 
+  getLatestFour(){
+    return this.http.get<MenuModel[]>(this.apiUrl+'latestFour');
+  }
+
+
   getById(id:number){
     return this.http.get<MenuModel>(this.apiUrl+id);
   }

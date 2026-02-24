@@ -1,0 +1,36 @@
+<section class="py-20 px-6 max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-[#181311] dark:text-white mb-2">Tüm Menü</h2>
+<p class="text-gray-600 dark:text-gray-300">Seçkin kahvelerimizi ve tatlılarımızı inceleyin.</p>
+</div>
+
+</div>
+<!-- Carousel Container -->
+<div class="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory scroll-smooth -mx-6 px-6 md:mx-0 md:px-0 scrollbar-hide">
+<!-- Card 1 -->
+<div class="row col-12">
+@for (item of menus(); track $index) {
+
+<div class="min-w-[280px] md:min-w-[320px] snap-center group col-3 mt-4">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a matcha lava cake with powdered sugar" style="background-image: url('{{item.imageUrl}}')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold shadow-lg">
+                            {{item.price | currency:'₺'}}
+                        </div>
+</div>
+<h3 class="text-xl font-bold text-[#181311] dark:text-white mb-1">{{item.name}}</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Warm, gooey center with premium Japanese matcha.</p>
+<button class="w-full py-2.5 rounded-lg border-2 border-[#181311] dark:border-white hover:bg-[#181311] hover:text-white dark:hover:bg-white dark:hover:text-[#181311] transition-all font-bold text-sm uppercase tracking-wide">
+                        Add to Order
+                    </button>
+</div>
+}
+
+</div>
+
+
+
+</div>
+</section>

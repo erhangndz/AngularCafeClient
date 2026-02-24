@@ -11,6 +11,7 @@ import { CreateCategory } from './admin-components/category/create-category/crea
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
 import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
 import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
+import { MenuAllUi } from './ui-components/menu-all-ui/menu-all-ui';
 
 const routes: Routes = [
 
@@ -19,7 +20,8 @@ const routes: Routes = [
 //UI-Routes
 {path:'',component:UiLayout, children:[
 {path:'',component:Home},
-{path:'contact',component: Contact}
+{path:'contact',component: Contact},
+{path:'menu',component:MenuAllUi}
 
 
 ]},

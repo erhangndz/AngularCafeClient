@@ -54,10 +54,21 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/tailwindcss/index.css",
+              "node_modules/tailwindcss/theme.css",
+              "node_modules/tailwindcss/utilities.css",
+              "node_modules/tailwindcss/preflight.css",
+              "node_modules/material-symbols/outlined.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+
             ],
             "scripts": [
-              "node_modules/sweetalert2/dist/sweetalert2.all.min.js"
+              "node_modules/sweetalert2/dist/sweetalert2.all.min.js",
+              "node_modules/google-fonts/index.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/scripts.js"
+
             ]
           },
           "configurations": {
